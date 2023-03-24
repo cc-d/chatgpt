@@ -24,20 +24,22 @@ def chunk_text(file_path: str, chunk_size: int) -> List[str]:
 
 
 def main():
-    if len(sys.argv) < 3:
-        print("Usage: python script.py <file_path> <chunk_size>")
+    if len(sys.argv) < 2:
+        print("Usage: python script.py <file_path>")
         return
 
     file_path = sys.argv[1]
-    chunk_size = int(sys.argv[2])
+    chunk_size = int(0.99 * 2048)  # 99% of the input limit for the chatbox
 
-    text_chunks = chunk_text(file_path, int(0.99 * chunk_size))
+    # Extract the stock name from the file name
+    stock_name = file_path.split('.')[0]
+
+    text_chunks = chunk_text(file_path, chunk_size)
 
     for i, chunk in enumerate(text_chunks):
-        with open(f"{file_path}-{i}.txt", 'w') as f:
+        with open(f"{stock_name}-{i}.chunk", 'w') as f:
             f.write(chunk)
 
 
 if __name__ == '__main__':
     main()
-

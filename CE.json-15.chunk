@@ -1,0 +1,53 @@
+"5. adjusted close": "95.53754180602",
+        "6. volume": "858656",
+        "7. dividend amount": "0.7000",
+        "8. split coefficient": "1.0"
+      }
+    }
+  },
+  "BALANCE_SHEET": {
+    "symbol": "CE",
+    "annualReports": [
+      {
+        "fiscalDateEnding": "2022-12-31",
+        "reportedCurrency": "USD",
+        "totalAssets": "26272000000",
+        "totalCurrentAssets": "6611000000",
+        "cashAndCashEquivalentsAtCarryingValue": "1508000000",
+        "cashAndShortTermInvestments": "1508000000",
+        "inventory": "2808000000",
+        "currentNetReceivables": "2413000000",
+        "totalNonCurrentAssets": "19837000000",
+        "propertyPlantEquipment": "5584000000",
+        "accumulatedDepreciationAmortizationPPE": "3687000000",
+        "intangibleAssets": "11247000000",
+        "intangibleAssetsExcludingGoodwill": "4105000000",
+        "goodwill": "7142000000",
+        "investments": "1215000000",
+        "longTermInvestments": "1062000000",
+        "shortTermInvestments": "None",
+        "otherCurrentAssets": "241000000",
+        "otherNonCurrentAssets": "547000000",
+        "totalLiabilities": "20635000000",
+        "totalCurrentLiabilities": "4068000000",
+        "currentAccountsPayable": "1518000000",
+        "deferredRevenue": "None",
+        "currentDebt": "1306000000",
+        "shortTermDebt": "800000000",
+        "totalNonCurrentLiabilities": "16099000000",
+        "capitalLeaseObligations": "147000000",
+        "longTermDebt": "13953000000",
+        "currentLongTermDebt": "481000000",
+        "longTermDebtNoncurrent": "13419000000",
+        "shortLongTermDebtTotal": "14753000000",
+        "otherCurrentLiabilities": "1201000000",
+        "otherNonCurrentLiabilities": "387000000",
+        "totalShareholderEquity": "5637000000",
+        "treasuryStock": "5491000000",
+        "retainedEarnings": "11274000000",
+        "commonStock": "0",
+        "commonStockSharesOutstanding": "108473932"
+      },
+      {
+        "fiscalDateEnding": "2021-12-31",
+       
