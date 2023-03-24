@@ -13,6 +13,16 @@ def setup_logging(level: str = 'debug') -> None:
         level=log_level, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
+MFORMAT = f'[%(asctime)s] [%(levelname)s] [%(module)s.%(funcName)s] %(message)s'
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s %(levelname)s %(module)s.%(funcName)s() %(message)s',
+    handlers=[logging.StreamHandler()],
+)
+
+mlogger = logging.getLogger(__name__)
+
 def logf(level: str = 'debug'):
     def decorator(func):
         @wraps(func)
@@ -24,9 +34,8 @@ def logf(level: str = 'debug'):
 
             end_time = time.time()
             elapsed_time = end_time - start_time
-            log_message = f"{func.__name__}({args}, {kwargs}) -> {result} took {elapsed_time:.2f} seconds"
-            logger = logging.getLogger(__name__)
-            logger.log(getattr(logging, level.upper()), log_message)
+            log_message = f"[{elapsed_time:.2f}] {func.__name__}({args}, {kwargs}) >>>>>>>>>> {result}"
+            mlogger.log(getattr(logging, level.upper()), log_message)
 
             return result
         return wrapper
